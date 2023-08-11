@@ -38,8 +38,8 @@ async def send_alert():
                 await bot.send_message(CHANNEL_ID,
                                        f'🔔 На торговому майданчику STEAM змінився курс долара до гривні: $1 = {new_prices["exchange_rate"]}₴')
 
-            with open('cache/exchangerate_cache.json', 'w', encoding='utf-8') as json_file:
-                json.dump(new_prices, json_file)
+                with open('cache/exchangerate_cache.json', 'w', encoding='utf-8') as json_file:
+                    json.dump(new_prices, json_file)
 
         except Exception as ex:
             print(f'Произошла ошибка - {ex}')
